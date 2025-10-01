@@ -1,0 +1,44 @@
+{
+  // Extension: VSCode Pets
+  "vscode-pets.position": "explorer",
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.theme": "none",
+  // Editor settings
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "all",
+  "editor.showFoldingControls": "always",
+  "editor.tabCompletion": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.suggest.showStatusBar": true,
+  "editor.suggestSelection": "first",
+  "editor.renderLineHighlight": "all",
+
+  // Terminal settings
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontSize": 12,
+
+  // Style synced with .editorconfig for cross-editor consistency.
+  // File handling settings
+  "files.autoSave": "off",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.encoding": "utf8",
+
+  // Workbench customization
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.productIconTheme": "icons-carbon",
+
+  // Miscellaneous
+  "breadcrumbs.enabled": true
+}
