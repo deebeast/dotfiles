@@ -1,0 +1,109 @@
+# Minimal core config with includes. Keep this file small; most settings live in includes.
+# Order: theme/colors, keybindings, OS-specific overrides.
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME
+
+
+include colors.conf
+include keybindings.conf
+include os-linux.conf
+include os-macos.conf
+
+# FONT
+font_family                  FiraCode Nerd Font
+bold_font                    auto
+italic_font                  auto
+bold_italic_font             auto
+font_size                    14.0
+disable_ligatures            never
+adjust_line_height           0
+adjust_column_width          0
+
+# TERMINAL/COMPAT
+term                         xterm-kitty
+
+# WINDOW & DECORATIONS
+hide_window_decorations      yes
+# hide_window_decorations      titlebar-only
+window_margin_width          5
+single_window_margin_width   -1
+window_border_width          1pt
+# active_border_color          #ff79c6
+# inactive_border_color        #6272a4
+
+window_padding_width         4
+draw_minimum_size            1
+
+# BACKGROUND
+# Keep opacity high for readability; tune as desired
+background_opacity           0.75
+# Use opaque by default for best performance; hotkeys control opacity dynamically.
+# background_opacity           1.0
+# Blur is handled by your compositor (if supported)
+# dynamic_background_opacity   yes  # Enables runtime opacity changes via keybindings
+
+# SCROLLBACK & PAGER
+scrollback_lines             20000
+scrollback_pager             less -R
+scrollback_pager_history_size 128
+select_by_word_characters    :@-./_~?&=%+#
+
+# BELL/NOTIFICATIONS
+enable_audio_bell            no
+visual_bell_duration         0.03
+bell_on_tab                  yes
+
+# CURSOR
+cursor_shape                 beam
+cursor_beam_thickness        1.4
+cursor_blink_interval        0
+cursor_stop_blinking_after   5.0
+
+# CLIPBOARD & MOUSE
+copy_on_select               yes
+strip_trailing_spaces        smart
+paste_actions                quote-urls-at-prompt
+detect_urls                  yes
+open_url_with                default
+# url_color                    #50fa7b
+url_style                    curly
+mouse_hide_wait              3.0
+
+# PERFORMANCE
+# ~100 FPS with low CPU; reduce input latency without flicker
+repaint_delay                10
+input_delay                  2
+sync_to_monitor              yes
+
+# TABS
+tab_bar_style                powerline
+tab_powerline_style          slanted
+tab_bar_edge                 bottom
+# tab_bar_align                center
+tab_bar_min_tabs             1
+tab_title_template           "{index}:{title}"
+tab_separator "||>"
+# tab_title_template "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{tab.last_focused_progress_percent}{title}"
+# active_tab_foreground        #282a36
+# active_tab_background        #50fa7b
+# inactive_tab_foreground      #f8f8f2
+# inactive_tab_background      #44475a
+
+# SHELL (login shell)
+# shell                        /usr/bin/fish -l
+# If using bash/zsh, switch accordingly
+# shell                      /bin/zsh -l
+# macOS users may want:
+# macos_option_as_alt        both
+
+# SAFETY
+# Keep remote control off unless you explicitly use kitty @ tooling
+allow_remote_control         no
+
+# LOGGING/DEBUG (uncomment for troubleshooting)
+# debug_font_fallback        yes
+# enable_tracing             yes
